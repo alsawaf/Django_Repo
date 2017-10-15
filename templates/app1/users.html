@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+
+    <h1>Here is the list of the users ! </h1>
+
+    {% if Users_Dict%}
+
+        <ul>
+            {% for user in Users_Dict %}
+
+            <li>User Info </li>
+
+            <ul>
+
+                <li>First Name : {{ person.First_Name }} </li>
+                <li>Last Name : {{ person.Last_Name }} </li>
+                <li>Email : {{ person.Email }} </li>
+            </ul>
+
+            {% endfor %}
+        </ul>
+
+
+    {% endif %}
+
+</body>
+</html>
