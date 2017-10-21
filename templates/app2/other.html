@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Main Home Page</title>
-</head>
-<body>
 
+{% extends "app2/base.html" %}
+{% comment %} extending base.html so anything outside the block tag will be inherited here{% endcomment %}
+
+{% block body_block%}
 <h1>Welcome to other !</h1>
-
-</body>
-</html>
+<h2>this is an example of template inheritance </h2>
+{% endblock %}

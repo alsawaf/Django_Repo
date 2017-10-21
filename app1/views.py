@@ -19,17 +19,18 @@ def users(request):
 def RegisterUser(request):
 
     RegisterFrom = RegisterUserForm()
+
     if request.method == 'POST' : #checks if the post requset was sent " means the user succssesfully presses submit "
         RegisterFrom = RegisterUserForm(request.POST) #we are passing the requset to this form object so it now contains the data
 
 
         if RegisterFrom.is_valid():
-            RegisterFrom.save(commit=True) # commit means commit this to the database
-            return index(request) # this calls the index func from views.py so it moves us back to the home page
+             RegisterFrom.save(commit=True) # commit means commit this to the database
+             return index(request) # this calls the index func from views.py so it moves us back to the home page
 
 
-        else:
-            print("Error !!")
+    else:
+        print("Error !!")
 
 
     return render(request,'app1/Form.html',{'RegisterFrom':RegisterFrom})

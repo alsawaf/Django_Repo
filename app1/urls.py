@@ -1,4 +1,6 @@
 from django.conf.urls import url
+
+import app1
 from app1 import views
 
 

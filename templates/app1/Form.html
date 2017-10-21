@@ -12,11 +12,11 @@
 
         <div>
 
-            <form class ="container" method="post">
-            {{ form.as_p }}
+            <form class="container" method="post">
+            {{RegisterFrom.as_p}}
             {% csrf_token %}
             <input type="submit" class="btn btn-primary" value="submit">
-
+            </form>
         </div>
     </body>
 </html>
